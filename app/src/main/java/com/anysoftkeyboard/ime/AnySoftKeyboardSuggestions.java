@@ -821,13 +821,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
     protected boolean canRestartWordSuggestion() {
         final InputViewBinder inputView = getInputView();
-        if(isPredictionOn() && isCursorTouchingWord()) {
-            //This function is called only if the cursor is moved outside a word.
-            //In case the cursor is touching a word it's a new word so i must show suggestions.
-            Logger.d(TAG, "User moved to new word. Predicting.");
-            return true;
-        }
-        else if (TextEntryState.isPredicting() || !isPredictionOn() || !mAllowSuggestionsRestart
+        if (TextEntryState.isPredicting() || !isPredictionOn() || !mAllowSuggestionsRestart
                 || !mCurrentlyAllowSuggestionRestart || inputView == null
                 || !inputView.isShown()) {
             // why?
