@@ -25,6 +25,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.anysoftkeyboard.addons.AddOn;
+import com.anysoftkeyboard.dictionaries.Suggest;
 import com.anysoftkeyboard.dictionaries.WordComposer;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
@@ -145,7 +146,7 @@ public abstract class AnySoftKeyboardKeyboardTagsSearcher extends AnySoftKeyboar
     }
 
     @Override
-    public void pickSuggestionManually(int index, CharSequence suggestion, boolean withAutoSpaceEnabled) {
+    public void pickSuggestionManually(int index, CharSequence suggestion, Suggest.SpaceType suggestSpaceType) {
         if (mWord.isAtTagsSearchState()) {
             if (index == 0) {
                 //this is a special case for tags-searcher
@@ -158,7 +159,7 @@ public abstract class AnySoftKeyboardKeyboardTagsSearcher extends AnySoftKeyboar
             }
         }
 
-        super.pickSuggestionManually(index, suggestion, withAutoSpaceEnabled);
+        super.pickSuggestionManually(index, suggestion, suggestSpaceType);
     }
 
     private static class NoOpKeyboard extends Keyboard {

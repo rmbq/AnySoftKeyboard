@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.view.KeyEvent;
 import android.view.inputmethod.InputConnection;
 
 import com.anysoftkeyboard.android.PowerSaving;
@@ -11,6 +12,7 @@ import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.dictionaries.Dictionary;
 import com.anysoftkeyboard.dictionaries.DictionaryBackgroundLoader;
+import com.anysoftkeyboard.dictionaries.Suggest;
 import com.anysoftkeyboard.dictionaries.TextEntryState;
 import com.anysoftkeyboard.gesturetyping.GestureTypingDetector;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
@@ -37,6 +39,9 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
     @Nullable
     private GestureTypingDetector mCurrentGestureDetector;
     private boolean mDetectorReady = false;
+
+    private boolean spaceBeforeApplied = false;
+    private int oldGesturePointsCount = 0;
 
     @NonNull
     private Disposable mDetectorStateSubscription = Disposables.disposed();
@@ -238,6 +243,15 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
             //we can call this as many times as we want, it has a short-circuit check.
             confirmLastGesture(mPrefsAutoSpace);
 
+            oldGesturePointsCount = currentGestureDetector.getCurrentGestureArraySize();
+
+            InputConnection ic = getCurrentInputConnection();
+            CharSequence c = ic.getTextBeforeCursor(1, 0);
+            if (c != null && c.length() > 0 && c.charAt(0) != ' ' && oldGesturePointsCount > 1) {
+                sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
+                spaceBeforeApplied = true;
+            } else spaceBeforeApplied = false;
+
             currentGestureDetector.clearGesture();
             onGestureTypingInput(x, y, eventTime);
 
@@ -271,6 +285,10 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
         if (!mGestureTypingEnabled) return;
         final GestureTypingDetector currentGestureDetector = mCurrentGestureDetector;
         if (currentGestureDetector != null) {
+            if(!spaceBeforeApplied && oldGesturePointsCount == 1 && currentGestureDetector.getCurrentGestureArraySize() > 1) {
+                spaceBeforeApplied = true;
+                sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
+            }
             currentGestureDetector.addPoint(x, y);
         }
     }
@@ -301,7 +319,7 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
 
     private void confirmLastGesture(boolean withAutoSpace) {
         if (TextEntryState.getState() == TextEntryState.State.PERFORMED_GESTURE) {
-            pickSuggestionManually(0, mWord.getTypedWord(), withAutoSpace);
+            pickSuggestionManually(0, mWord.getTypedWord(), Suggest.SpaceType.Gesture);
         }
     }
 
@@ -357,11 +375,8 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
                     //clearing any suggestion shown
                     setSuggestions(Collections.emptyList(), false, false, false);
                 }
-
                 ic.endBatchEdit();
             }
-
-            currentGestureDetector.clearGesture();
         }
     }
 }

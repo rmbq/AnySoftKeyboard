@@ -20,6 +20,7 @@ import android.graphics.Point;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.anysoftkeyboard.dictionaries.Suggest;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardViewWithExtraDraw;
 import com.anysoftkeyboard.keyboards.views.extradraw.PopTextExtraDraw;
@@ -71,10 +72,10 @@ public abstract class AnySoftKeyboardPopText extends AnySoftKeyboardPowerSaving 
     }
 
     @Override
-    public void pickSuggestionManually(int index, CharSequence suggestion, boolean withAutoSpaceEnabled) {
+    public void pickSuggestionManually(int index, CharSequence suggestion, Suggest.SpaceType suggestSpaceType) {
         //we do not want to pop text when user picks from the suggestions bar
         mLastKey = null;
-        super.pickSuggestionManually(index, suggestion, withAutoSpaceEnabled);
+        super.pickSuggestionManually(index, suggestion, suggestSpaceType);
     }
 
     private void popText(CharSequence textToPop) {

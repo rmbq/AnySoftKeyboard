@@ -396,4 +396,10 @@ public class Suggest {
             return mFrequencyDelta;
         }
     }
+
+    public enum SpaceType {
+        Gesture,
+        SpaceAfter,
+        NoSpaceAfter
+    }
 }

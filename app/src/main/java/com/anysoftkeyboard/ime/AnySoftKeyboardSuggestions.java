@@ -978,11 +978,11 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     }
 
     public void pickSuggestionManually(int index, CharSequence suggestion) {
-        pickSuggestionManually(index, suggestion, mAutoSpace);
+        pickSuggestionManually(index, suggestion, mAutoSpace ? Suggest.SpaceType.SpaceAfter : Suggest.SpaceType.NoSpaceAfter);
     }
 
     @CallSuper
-    public void pickSuggestionManually(int index, CharSequence suggestion, boolean withAutoSpaceEnabled) {
+    public void pickSuggestionManually(int index, CharSequence suggestion, Suggest.SpaceType suggestSpaceType) {
         final String typedWord = mWord.getTypedWord().toString();
 
         final InputConnection ic = getCurrentInputConnection();
@@ -1008,7 +1008,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
             TextEntryState.acceptedSuggestion(mWord.getTypedWord(), suggestion);
             // Follow it with a space
-            if (withAutoSpaceEnabled && (index == 0 || !mWord.isAtTagsSearchState())) {
+            if (suggestSpaceType == Suggest.SpaceType.SpaceAfter && (index == 0 || !mWord.isAtTagsSearchState())) {
                 sendKeyChar((char) KeyCodes.SPACE);
                 mAdditionalCharacterForReverting = true;
                 setSpaceTimeStamp(true);

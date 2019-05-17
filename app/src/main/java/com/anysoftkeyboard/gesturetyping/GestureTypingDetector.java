@@ -318,6 +318,10 @@ public class GestureTypingDetector {
         return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
     }
 
+    public int getCurrentGestureArraySize() {
+        return mWorkspaceData.mCurrentGestureArraySize;
+    }
+
     private static class WorkspaceData {
         public static final int MAX_GESTURE_LENGTH = 2048;
         private int mCurrentGestureArraySize = 0;
