@@ -69,9 +69,7 @@ public class Suggest {
             final int[] priorities = mPriorities;
             final int prefMaxSuggestions = mPrefMaxSuggestions;
             // Check if it's the same word, only caps are different
-            if (compareCaseInsensitive(mLowerOriginalWord, word, wordOffset, wordLength)) {
-                pos = 0;
-            } else {
+            if (!compareCaseInsensitive(mLowerOriginalWord, word, wordOffset, wordLength)) {
                 // Check the last one's priority and bail
                 if (priorities[prefMaxSuggestions - 1] >= frequency)
                     return true;
@@ -169,7 +167,7 @@ public class Suggest {
      *
      * @throws IllegalArgumentException if the number is out of range
      */
-    public void setMaxSuggestions(int maxSuggestions) {
+    private void setMaxSuggestions(int maxSuggestions) {
         if (maxSuggestions < 1 || maxSuggestions > 100) {
             throw new IllegalArgumentException(
                     "maxSuggestions must be between 1 and 100");

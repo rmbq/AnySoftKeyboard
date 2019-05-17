@@ -323,7 +323,7 @@ public class GestureTypingDetector {
     }
 
     private static class WorkspaceData {
-        public static final int MAX_GESTURE_LENGTH = 2048;
+        static final int MAX_GESTURE_LENGTH = 2048;
         private int mCurrentGestureArraySize = 0;
         private final int[] mCurrentGestureXs = new int[MAX_GESTURE_LENGTH];
         private final int[] mCurrentGestureYs = new int[MAX_GESTURE_LENGTH];
