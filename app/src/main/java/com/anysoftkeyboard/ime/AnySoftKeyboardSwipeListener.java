@@ -32,12 +32,11 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
     private int mFirstDownKeyCode;
 
     private LayoutSwitchAnimationListener mSwitchAnimator;
-
-    private int mSwipeUpKeyCode;
+    //private int mSwipeUpKeyCode;
     private int mSwipeUpFromSpaceBarKeyCode;
-    private int mSwipeDownKeyCode;
-    private int mSwipeLeftKeyCode;
-    private int mSwipeRightKeyCode;
+    //private int mSwipeDownKeyCode;
+    //private int mSwipeLeftKeyCode;
+    //private int mSwipeRightKeyCode;
     private int mSwipeLeftFromSpaceBarKeyCode;
     private int mSwipeRightFromSpaceBarKeyCode;
     private int mSwipeLeftWithTwoFingersKeyCode;
@@ -59,11 +58,11 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
                 .subscribe(animationsLevel -> mSwitchAnimator.setAnimations(animationsLevel == AnimationsLevel.Full),
                         GenericOnError.onError("mSwitchAnimator.setAnimations")));
 
-        subPrefs(R.string.settings_key_swipe_up_action, R.string.swipe_action_value_shift, code -> mSwipeUpKeyCode = code);
+//        subPrefs(R.string.settings_key_swipe_up_action, R.string.swipe_action_value_shift, code -> mSwipeUpKeyCode = code);
         subPrefs(R.string.settings_key_swipe_up_from_spacebar_action, R.string.swipe_action_value_utility_keyboard, code -> mSwipeUpFromSpaceBarKeyCode = code);
-        subPrefs(R.string.settings_key_swipe_down_action, R.string.swipe_action_value_hide, code -> mSwipeDownKeyCode = code);
-        subPrefs(R.string.settings_key_swipe_left_action, R.string.swipe_action_value_next_symbols, code -> mSwipeLeftKeyCode = code);
-        subPrefs(R.string.settings_key_swipe_right_action, R.string.swipe_action_value_next_alphabet, code -> mSwipeRightKeyCode = code);
+//        subPrefs(R.string.settings_key_swipe_down_action, R.string.swipe_action_value_hide, code -> mSwipeDownKeyCode = code);
+//        subPrefs(R.string.settings_key_swipe_left_action, R.string.swipe_action_value_next_symbols, code -> mSwipeLeftKeyCode = code);
+//        subPrefs(R.string.settings_key_swipe_right_action, R.string.swipe_action_value_next_alphabet, code -> mSwipeRightKeyCode = code);
         subPrefs(R.string.settings_key_pinch_gesture_action, R.string.swipe_action_value_merge_layout, code -> mPinchKeyCode = code);
         subPrefs(R.string.settings_key_separate_gesture_action, R.string.swipe_action_value_split_layout, code -> mSeparateKeyCode = code);
         subPrefs(R.string.settings_key_swipe_left_space_bar_action, R.string.swipe_action_value_next_symbols, code -> mSwipeLeftFromSpaceBarKeyCode = code);
@@ -88,7 +87,7 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
         } else if (twoFingersGesture) {
             keyCode = mSwipeRightWithTwoFingersKeyCode;
         } else {
-            keyCode = mSwipeRightKeyCode;
+            keyCode = 0;
         }
 
         if (keyCode != 0)
@@ -105,7 +104,7 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
         } else if (twoFingersGesture) {
             keyCode = mSwipeLeftWithTwoFingersKeyCode;
         } else {
-            keyCode = mSwipeLeftKeyCode;
+            keyCode = 0;
         }
 
         if (keyCode != 0)
@@ -114,13 +113,13 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
 
     @Override
     public void onSwipeDown() {
-        if (mSwipeDownKeyCode != 0)
-            onKey(mSwipeDownKeyCode, null, -1, new int[]{mSwipeDownKeyCode}, false/*not directly pressed the UI key*/);
+//        if (mSwipeDownKeyCode != 0)
+//            onKey(mSwipeDownKeyCode, null, -1, new int[]{mSwipeDownKeyCode}, false/*not directly pressed the UI key*/);
     }
 
     @Override
     public void onSwipeUp() {
-        final int keyCode = mFirstDownKeyCode == KeyCodes.SPACE ? mSwipeUpFromSpaceBarKeyCode : mSwipeUpKeyCode;
+        final int keyCode = mFirstDownKeyCode == KeyCodes.SPACE ? mSwipeUpFromSpaceBarKeyCode : 0;
         if (keyCode != 0)
             onKey(keyCode, null, -1, new int[]{keyCode}, false/*not directly pressed the UI key*/);
     }
