@@ -180,11 +180,11 @@
     <string name="settings_key_swipe_velocity_threshold">settings_key_swipe_velocity_threshold</string>
     <!-- these values are normalized. -->
     <string-array name="settings_key_swipe_velocity_threshold_values">
-        <item>220</item>
-        <item>300</item>
-        <item>380</item>
-        <item>460</item>
-        <item>540</item>
+        <item>450</item>
+        <item>550</item>
+        <item>750</item>
+        <item>1000</item>
+        <item>1200</item>
     </string-array>
 
     <string-array name="settings_key_preview_position_override_names">
@@ -206,11 +206,11 @@
 
     <string name="settings_key_swipe_distance_threshold">settings_key_swipe_distance_threshold</string>
     <string-array name="settings_key_swipe_distance_threshold_values">
+        <item>15</item>
+        <item>20</item>
         <item>30</item>
-        <item>80</item>
-        <item>140</item>
-        <item>180</item>
-        <item>240</item>
+        <item>70</item>
+        <item>100</item>
     </string-array>
     <string-array name="settings_key_swipe_distance_threshold_names">
         <item>@string/settings_swipe_distance_very_short</item>
