@@ -111,10 +111,10 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw implements Inp
         mInAnimation = null;
 
         //TODO: should come from a theme
-        mGesturePaint.setColor(Color.GREEN);
+        mGesturePaint.setColor(Color.rgb(255, 142, 209));
         mGesturePaint.setStrokeWidth(10);
         mGesturePaint.setStyle(Paint.Style.STROKE);
-        mGesturePaint.setStrokeJoin(Paint.Join.BEVEL);
+        mGesturePaint.setStrokeJoin(Paint.Join.ROUND);
         mGesturePaint.setStrokeCap(Paint.Cap.BUTT);
 
         mGestureDrawingHelper = new GestureTypingPathDrawHelper(context, AnyKeyboardView.this::invalidate, mGesturePaint);
