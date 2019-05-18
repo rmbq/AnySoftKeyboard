@@ -40,7 +40,8 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
     private GestureTypingDetector mCurrentGestureDetector;
     private boolean mDetectorReady = false;
 
-    private boolean spaceBeforeApplied = false;
+    private boolean needToApplySpaceBefore = false;
+    private boolean deletePressed = false;
     private int oldGesturePointsCount = 0;
 
     @NonNull
@@ -247,10 +248,12 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
 
             InputConnection ic = getCurrentInputConnection();
             CharSequence c = ic.getTextBeforeCursor(1, 0);
-            if (c != null && c.length() > 0 && c.charAt(0) != ' ' && oldGesturePointsCount > 1) {
-                sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
-                spaceBeforeApplied = true;
-            } else spaceBeforeApplied = false;
+            if (c != null && c.length() > 0 && c.charAt(0) != ' ') {
+                if(oldGesturePointsCount > 1 && !deletePressed) {
+                    sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
+                    needToApplySpaceBefore = false;
+                } else needToApplySpaceBefore = true;
+            } else needToApplySpaceBefore = false;
 
             currentGestureDetector.clearGesture();
             onGestureTypingInput(x, y, eventTime);
@@ -285,9 +288,9 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
         if (!mGestureTypingEnabled) return;
         final GestureTypingDetector currentGestureDetector = mCurrentGestureDetector;
         if (currentGestureDetector != null) {
-            if(!spaceBeforeApplied && oldGesturePointsCount == 1 && currentGestureDetector.getCurrentGestureArraySize() > 1) {
-                spaceBeforeApplied = true;
+            if(needToApplySpaceBefore && (oldGesturePointsCount == 1 || deletePressed) && currentGestureDetector.getCurrentGestureArraySize() > 1) {
                 sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
+                needToApplySpaceBefore = false;
             }
             currentGestureDetector.addPoint(x, y);
         }
@@ -313,6 +316,8 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
         if (mGestureTypingEnabled && TextEntryState.getState() == TextEntryState.State.PERFORMED_GESTURE && primaryCode > 0 /*printable character*/) {
             confirmLastGesture(primaryCode != KeyCodes.SPACE && mPrefsAutoSpace);
         }
+
+        deletePressed = primaryCode == KeyCodes.DELETE;
 
         super.onKey(primaryCode, key, multiTapIndex, nearByKeyCodes, fromUI);
     }
@@ -375,6 +380,9 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
                     //clearing any suggestion shown
                     setSuggestions(Collections.emptyList(), false, false, false);
                 }
+
+                deletePressed = false;
+
                 ic.endBatchEdit();
             }
         }
