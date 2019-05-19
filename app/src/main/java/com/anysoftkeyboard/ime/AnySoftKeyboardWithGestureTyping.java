@@ -42,7 +42,7 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
 
     private boolean needToApplySpaceBefore = false;
     private boolean deletePressed = false;
-    private int oldGesturePointsCount = 0;
+    private boolean doneDone = false;
 
     @NonNull
     private Disposable mDetectorStateSubscription = Disposables.disposed();
@@ -244,16 +244,17 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
             //we can call this as many times as we want, it has a short-circuit check.
             confirmLastGesture(mPrefsAutoSpace);
 
-            oldGesturePointsCount = currentGestureDetector.getCurrentGestureArraySize();
-
             InputConnection ic = getCurrentInputConnection();
             CharSequence c = ic.getTextBeforeCursor(1, 0);
             if (c != null && c.length() > 0 && c.charAt(0) != ' ') {
-                if(oldGesturePointsCount > 1 && !deletePressed) {
+                if(!deletePressed && doneDone) {
                     sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
                     needToApplySpaceBefore = false;
                 } else needToApplySpaceBefore = true;
             } else needToApplySpaceBefore = false;
+
+            doneDone = false;
+            currentPoint = 0;
 
             currentGestureDetector.clearGesture();
             onGestureTypingInput(x, y, eventTime);
@@ -283,16 +284,18 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
         }
     }
 
+    private int currentPoint = 0;
     @Override
     public void onGestureTypingInput(int x, int y, long eventTime) {
         if (!mGestureTypingEnabled) return;
         final GestureTypingDetector currentGestureDetector = mCurrentGestureDetector;
         if (currentGestureDetector != null) {
-            if(needToApplySpaceBefore && (oldGesturePointsCount == 1 || deletePressed) && currentGestureDetector.getCurrentGestureArraySize() > 1) {
-                sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
+            if(currentGestureDetector.addPoint(x, y))
+                currentPoint++;
+            if(needToApplySpaceBefore && currentPoint > 1) {
                 needToApplySpaceBefore = false;
+                sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
             }
-            currentGestureDetector.addPoint(x, y);
         }
     }
 
@@ -382,6 +385,9 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
                 }
 
                 deletePressed = false;
+                doneDone = true;
+
+                currentGestureDetector.clearGesture();
 
                 ic.endBatchEdit();
             }

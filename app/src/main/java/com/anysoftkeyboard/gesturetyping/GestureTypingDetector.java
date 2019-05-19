@@ -159,17 +159,25 @@ public class GestureTypingDetector {
         return getPathCorners(workspaceData);
     }
 
-    public void addPoint(int x, int y) {
-        if (mGenerateStateSubject.getValue() != LoadingState.LOADED) return;
+    public boolean addPoint(int x, int y) {
+        boolean ret = false;
+
+        if (mGenerateStateSubject.getValue() != LoadingState.LOADED) return ret;
 
         if (mWorkspaceData.mCurrentGestureArraySize > 0) {
             final int dx = mWorkspaceData.mCurrentGestureXs[mWorkspaceData.mCurrentGestureArraySize - 1] - x;
             final int dy = mWorkspaceData.mCurrentGestureYs[mWorkspaceData.mCurrentGestureArraySize - 1] - y;
 
-            if (dx * dx + dy * dy <= mMinPointDistanceSquared) return;
-        }
+            int squared = dx * dx + dy * dy;
+
+            if (squared <= mMinPointDistanceSquared) return false;
+
+            if (squared > 30 * 30) ret = true;
+        } else ret = true;
 
         mWorkspaceData.addPoint(x, y);
+
+        return ret;
     }
 
     public void clearGesture() {
