@@ -58,7 +58,6 @@ public class GestureTypingDetector {
     private final ArrayList<int[]> mWordsCorners = new ArrayList<>();
 
     public GestureTypingDetector(int minPointDistance, @NonNull Iterable<Keyboard.Key> keys) {
-        minPointDistance = 55;
         mMinPointDistanceSquared = minPointDistance * minPointDistance;
         mKeys = keys;
 
