@@ -7,7 +7,6 @@ import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.view.inputmethod.InputConnection;
 
-import com.anysoftkeyboard.android.PowerSaving;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.dictionaries.Dictionary;
@@ -28,7 +27,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.disposables.Disposables;
 
@@ -55,24 +53,19 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
     public void onCreate() {
         super.onCreate();
 
-        addDisposable(Observable.combineLatest(
-                PowerSaving.observePowerSavingState(getApplicationContext(), R.string.settings_key_power_save_mode_gesture_control),
-                prefs().getBoolean(R.string.settings_key_gesture_typing, R.bool.settings_default_gesture_typing).asObservable(),
-                (powerState, gestureTyping) -> {
-                    if (powerState) return false;
-                    return gestureTyping;
-                }).subscribe(enabled -> {
-            mGestureTypingEnabled = enabled;
-            mDetectorStateSubscription.dispose();
-            if (!mGestureTypingEnabled) {
-                destroyAllDetectors();
-            } else {
-                final AnyKeyboard currentAlphabetKeyboard = getCurrentAlphabetKeyboard();
-                if (currentAlphabetKeyboard != null) {
-                    setupGestureDetector(currentAlphabetKeyboard);
-                }
-            }
-        }, GenericOnError.onError("settings_key_gesture_typing")));
+        addDisposable(prefs().getBoolean(R.string.settings_key_gesture_typing, R.bool.settings_default_gesture_typing)
+                .asObservable().subscribe(enabled -> {
+                    mGestureTypingEnabled = enabled;
+                    mDetectorStateSubscription.dispose();
+                    if (!mGestureTypingEnabled) {
+                        destroyAllDetectors();
+                    } else {
+                        final AnyKeyboard currentAlphabetKeyboard = getCurrentAlphabetKeyboard();
+                        if (currentAlphabetKeyboard != null) {
+                            setupGestureDetector(currentAlphabetKeyboard);
+                        }
+                    }
+                }, GenericOnError.onError("settings_key_gesture_typing")));
     }
 
     private void destroyAllDetectors() {
