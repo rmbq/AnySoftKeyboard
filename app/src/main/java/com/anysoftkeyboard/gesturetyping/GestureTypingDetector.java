@@ -24,7 +24,7 @@ import io.reactivex.subjects.ReplaySubject;
 public class GestureTypingDetector {
     private static final String TAG = "GestureTypingDetector";
 
-    private static final double CURVATURE_THRESHOLD = Math.toRadians(180);
+    private static final double CURVATURE_THRESHOLD = Math.toRadians(170);
     // How many points away from the current point do we use when calculating curvature?
     private static final int CURVATURE_NEIGHBORHOOD = 1;
     // How far away do two points of the gesture have to be (distance squared)?
@@ -324,6 +324,10 @@ public class GestureTypingDetector {
 
     private static double dist(double x1, double y1, double x2, double y2) {
         return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    }
+
+    public int getCurrentGestureArraySize() {
+        return mWorkspaceData.mCurrentGestureArraySize;
     }
 
     private static class WorkspaceData {
