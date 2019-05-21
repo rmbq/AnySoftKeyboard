@@ -230,6 +230,10 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
         setupInputViewWatermark();
     }
 
+    private boolean needSpace(char c) {
+        return !(c == ' ' || c == '#');
+    }
+
     @Override
     public boolean onGestureTypingInputStart(int x, int y, AnyKeyboard.AnyKey key, long eventTime) {
         final GestureTypingDetector currentGestureDetector = mCurrentGestureDetector;
@@ -239,7 +243,7 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
 
             InputConnection ic = getCurrentInputConnection();
             CharSequence c = ic.getTextBeforeCursor(1, 0);
-            if (c != null && c.length() > 0 && c.charAt(0) != ' ') {
+            if (c != null && c.length() > 0 && needSpace(c.charAt(0))) {
                 if(!deletePressed && doneDone) {
                     sendDownUpKeyEvents(KeyEvent.KEYCODE_SPACE);
                     needToApplySpaceBefore = false;
