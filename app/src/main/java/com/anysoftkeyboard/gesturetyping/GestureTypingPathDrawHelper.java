@@ -56,7 +56,7 @@ public class GestureTypingPathDrawHelper {
             PointF direction = new PointF(mEndX - mStartX, mEndY - mStartY);
             direction.x = direction.x / direction.length();
             direction.y = direction.y / direction.length();
-            PointF directionV = new PointF(direction.y, -direction.x);
+            PointF directionV = new PointF(-direction.x, direction.y);
 
             float dx = distance * directionV.x;
             float dy = distance * directionV.y;
