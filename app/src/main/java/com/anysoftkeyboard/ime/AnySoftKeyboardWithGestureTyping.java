@@ -231,7 +231,7 @@ public abstract class AnySoftKeyboardWithGestureTyping extends AnySoftKeyboardWi
     }
 
     private boolean needSpace(char c) {
-        return !(c == ' ' || c == '#');
+        return !(c == ' ' || c == '#' || c == '\'');
     }
 
     @Override
