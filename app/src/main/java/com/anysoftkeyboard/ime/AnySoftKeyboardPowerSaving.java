@@ -21,13 +21,7 @@ public abstract class AnySoftKeyboardPowerSaving extends AnySoftKeyboardNightMod
     public void onCreate() {
         super.onCreate();
 
-        addDisposable(PowerSaving.observePowerSavingState(getApplicationContext(), 0).subscribe(
-                powerState -> {
-                    mPowerState = powerState;
-                    setupInputViewWatermark();
-                },
-                GenericOnError.onError("Power-Saving icon")
-        ));
+        mPowerState = false;
 
         addDisposable(PowerSaving.observePowerSavingState(getApplicationContext(), R.string.settings_key_power_save_mode_theme_control, R.bool.settings_default_true)
                 .subscribe(mToggleOverlayCreator::setToggle, GenericOnError.onError("Power-Saving theme")));
