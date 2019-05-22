@@ -29,7 +29,7 @@ import com.menny.android.anysoftkeyboard.R;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
-public abstract class AnySoftKeyboardPopText extends AnySoftKeyboardPowerSaving {
+public abstract class AnySoftKeyboardPopText extends AnySoftKeyboardNightMode {
 
     private boolean mPopTextOnCorrection = true;
     private boolean mPopTextOnWord = false;

@@ -74,7 +74,7 @@ public class AnySoftKeyboardNightModeTest extends AnySoftKeyboardBaseTest {
 
         final OverlyDataCreator originalOverlayDataCreator = mAnySoftKeyboardUnderTest.getOriginalOverlayDataCreator();
 
-        Assert.assertTrue(originalOverlayDataCreator instanceof AnySoftKeyboardPowerSaving.ToggleOverlayCreator);
+        Assert.assertTrue(originalOverlayDataCreator instanceof AnySoftKeyboardNightMode.ToggleOverlayCreator);
 
         final OverlayData normal = originalOverlayDataCreator.createOverlayData(new ComponentName(ApplicationProvider.getApplicationContext(), MainSettingsActivity.class));
         Assert.assertNotEquals(0xFF222222, normal.getPrimaryColor());

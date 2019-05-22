@@ -16,7 +16,7 @@ import java.util.List;
 public abstract class AnySoftKeyboardNightMode extends AnySoftKeyboardThemeOverlay {
 
     private boolean mNightMode;
-    private AnySoftKeyboardPowerSaving.ToggleOverlayCreator mToggleOverlayCreator;
+    private ToggleOverlayCreator mToggleOverlayCreator;
 
     @Override
     public void onCreate() {
