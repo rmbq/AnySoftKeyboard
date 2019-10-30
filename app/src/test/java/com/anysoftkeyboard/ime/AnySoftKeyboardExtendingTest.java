@@ -3,7 +3,7 @@ package com.anysoftkeyboard.ime;
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.AnySoftKeyboardBaseTest;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import java.io.File;
 import java.net.URL;
 import java.util.Collections;
@@ -23,7 +23,7 @@ public class AnySoftKeyboardExtendingTest extends AnySoftKeyboardBaseTest {
         final String imePackage = "com.anysoftkeyboard.ime";
         final Set<Class<?>> allPossibleClasses =
                 Collections.list(
-                                SoftKeyboard.class
+                        AnySoftKeyboard.class
                                         .getClassLoader()
                                         .getResources(imePackage.replace('.', '/')))
                         .stream()
@@ -47,7 +47,7 @@ public class AnySoftKeyboardExtendingTest extends AnySoftKeyboardBaseTest {
                                         return Class.forName(
                                                 fullClassName,
                                                 true,
-                                                SoftKeyboard.class.getClassLoader());
+                                                AnySoftKeyboard.class.getClassLoader());
                                     } catch (ClassNotFoundException e) {
                                         throw new RuntimeException(e);
                                     }
@@ -56,7 +56,7 @@ public class AnySoftKeyboardExtendingTest extends AnySoftKeyboardBaseTest {
 
         allPossibleClasses.add(AnySoftKeyboard.class);
 
-        Class<?> superclass = SoftKeyboard.class.getSuperclass();
+        Class<?> superclass = AnySoftKeyboard.class.getSuperclass();
         Assert.assertNotNull(superclass);
         while (!superclass.equals(AnySoftKeyboardBase.class)) {
             Assert.assertTrue(

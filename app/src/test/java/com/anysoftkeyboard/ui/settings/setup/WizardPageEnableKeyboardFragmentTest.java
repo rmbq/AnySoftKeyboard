@@ -7,10 +7,12 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.menny.android.anysoftkeyboard.R;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.robolectric.Shadows;
@@ -54,7 +56,7 @@ public class WizardPageEnableKeyboardFragmentTest
     @Test
     public void testKeyboardEnabled() {
         final String flatASKComponent =
-                new ComponentName(BuildConfig.APPLICATION_ID, SoftKeyboard.class.getName())
+                new ComponentName(BuildConfig.APPLICATION_ID, AnySoftKeyboard.class.getName())
                         .flattenToString();
         Settings.Secure.putString(
                 getApplicationContext().getContentResolver(),

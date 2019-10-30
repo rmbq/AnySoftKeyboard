@@ -8,11 +8,13 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+
+import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.menny.android.anysoftkeyboard.R;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import java.util.Collection;
 import org.junit.Assert;
 import org.junit.Test;
@@ -93,7 +95,7 @@ public class SetUpKeyboardWizardFragmentTest
         ensureAllScheduledJobsAreDone();
 
         final String flatASKComponent =
-                new ComponentName(BuildConfig.APPLICATION_ID, SoftKeyboard.class.getName())
+                new ComponentName(BuildConfig.APPLICATION_ID, AnySoftKeyboard.class.getName())
                         .flattenToString();
         Settings.Secure.putString(
                 fragment.getActivity().getContentResolver(),

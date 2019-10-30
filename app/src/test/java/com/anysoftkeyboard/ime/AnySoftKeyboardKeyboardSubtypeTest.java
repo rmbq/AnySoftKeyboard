@@ -37,7 +37,7 @@ public class AnySoftKeyboardKeyboardSubtypeTest extends AnySoftKeyboardBaseTest 
                         Mockito.eq(
                                 new ComponentName(
                                                 "com.menny.android.anysoftkeyboard",
-                                                "com.menny.android.anysoftkeyboard.SoftKeyboard")
+                                                "com.menny.android.anysoftkeyboard.AnySoftKeyboard")
                                         .flattenToShortString()),
                         subtypeArgumentCaptor.capture());
         final InputMethodSubtype subtypeArgumentCaptorValue = subtypeArgumentCaptor.getValue();
@@ -62,7 +62,7 @@ public class AnySoftKeyboardKeyboardSubtypeTest extends AnySoftKeyboardBaseTest 
                         Mockito.eq(
                                 new ComponentName(
                                                 "com.menny.android.anysoftkeyboard",
-                                                "com.menny.android.anysoftkeyboard.SoftKeyboard")
+                                                "com.menny.android.anysoftkeyboard.AnySoftKeyboard")
                                         .flattenToShortString()),
                         subtypesCaptor.capture());
 
@@ -117,7 +117,7 @@ public class AnySoftKeyboardKeyboardSubtypeTest extends AnySoftKeyboardBaseTest 
                         Mockito.eq(
                                 new ComponentName(
                                                 "com.menny.android.anysoftkeyboard",
-                                                "com.menny.android.anysoftkeyboard.SoftKeyboard")
+                                                "com.menny.android.anysoftkeyboard.AnySoftKeyboard")
                                         .flattenToShortString()),
                         subtypesCaptor.capture());
 
@@ -169,7 +169,7 @@ public class AnySoftKeyboardKeyboardSubtypeTest extends AnySoftKeyboardBaseTest 
                         Mockito.eq(
                                 new ComponentName(
                                                 "com.menny.android.anysoftkeyboard",
-                                                "com.menny.android.anysoftkeyboard.SoftKeyboard")
+                                                "com.menny.android.anysoftkeyboard.AnySoftKeyboard")
                                         .flattenToShortString()),
                         subtypeArgumentCaptor.capture());
         final InputMethodSubtype subtypeArgumentCaptorValue = subtypeArgumentCaptor.getValue();

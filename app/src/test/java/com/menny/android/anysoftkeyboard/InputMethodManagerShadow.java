@@ -27,7 +27,7 @@ public class InputMethodManagerShadow extends org.robolectric.shadows.ShadowInpu
         mInputMethodInfos.add(
                 new InputMethodInfo(
                         "com.menny.android.anysoftkeyboard",
-                        "SoftKeyboard",
+                        "AnySoftKeyboard",
                         "AnySoftKeyboard",
                         ".MainSettingsActivity"));
         mEnabledInputMethods.add("com.menny.android.anysoftkeyboard");
@@ -41,7 +41,7 @@ public class InputMethodManagerShadow extends org.robolectric.shadows.ShadowInpu
         mInputMethodInfos.add(
                 new InputMethodInfo(
                         "android.ime.KeyboardService",
-                        "SoftKeyboard",
+                        "AnySoftKeyboard",
                         "AOSP Keyboard",
                         ".MainSettingsActivity"));
     }

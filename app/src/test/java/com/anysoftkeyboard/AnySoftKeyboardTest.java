@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import com.menny.android.anysoftkeyboard.R;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,11 +18,11 @@ import org.robolectric.android.controller.ServiceController;
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class AnySoftKeyboardTest {
 
-    private ServiceController<SoftKeyboard> mAnySoftKeyboardUnderTest;
+    private ServiceController<AnySoftKeyboard> mAnySoftKeyboardUnderTest;
 
     @Before
     public void setUp() throws Exception {
-        mAnySoftKeyboardUnderTest = Robolectric.buildService(SoftKeyboard.class);
+        mAnySoftKeyboardUnderTest = Robolectric.buildService(AnySoftKeyboard.class);
     }
 
     @After

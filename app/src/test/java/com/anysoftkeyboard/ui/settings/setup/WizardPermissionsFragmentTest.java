@@ -12,11 +12,13 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.test.core.app.ApplicationProvider;
+
+import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.menny.android.anysoftkeyboard.R;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.robolectric.Shadows;
@@ -48,7 +50,7 @@ public class WizardPermissionsFragmentTest
     @Test
     public void testKeyboardEnabledAndDefaultButNoPermission() {
         final String flatASKComponent =
-                new ComponentName(BuildConfig.APPLICATION_ID, SoftKeyboard.class.getName())
+                new ComponentName(BuildConfig.APPLICATION_ID, AnySoftKeyboard.class.getName())
                         .flattenToString();
         Settings.Secure.putString(
                 getApplicationContext().getContentResolver(),
@@ -90,7 +92,7 @@ public class WizardPermissionsFragmentTest
     @Test
     public void testKeyboardEnabledAndDefaultButDictionaryDisabled() {
         final String flatASKComponent =
-                new ComponentName(BuildConfig.APPLICATION_ID, SoftKeyboard.class.getName())
+                new ComponentName(BuildConfig.APPLICATION_ID, AnySoftKeyboard.class.getName())
                         .flattenToString();
         Settings.Secure.putString(
                 getApplicationContext().getContentResolver(),
@@ -122,7 +124,7 @@ public class WizardPermissionsFragmentTest
     @Test
     public void testKeyboardEnabledAndDefaultAndHasPermission() {
         final String flatASKComponent =
-                new ComponentName(BuildConfig.APPLICATION_ID, SoftKeyboard.class.getName())
+                new ComponentName(BuildConfig.APPLICATION_ID, AnySoftKeyboard.class.getName())
                         .flattenToString();
         Settings.Secure.putString(
                 getApplicationContext().getContentResolver(),

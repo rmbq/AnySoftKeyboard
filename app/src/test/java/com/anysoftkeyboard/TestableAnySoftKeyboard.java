@@ -40,7 +40,7 @@ import com.anysoftkeyboard.quicktextkeys.QuickKeyHistoryRecords;
 import com.anysoftkeyboard.quicktextkeys.TagsExtractor;
 import com.anysoftkeyboard.remote.RemoteInsertion;
 import com.menny.android.anysoftkeyboard.R;
-import com.menny.android.anysoftkeyboard.SoftKeyboard;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -52,7 +52,7 @@ import org.mockito.MockingDetails;
 import org.mockito.Mockito;
 import org.robolectric.Robolectric;
 
-public class TestableAnySoftKeyboard extends SoftKeyboard {
+public abstract class TestableAnySoftKeyboard extends AnySoftKeyboard {
     private Suggest mSpiedSuggest;
     private TestableKeyboardSwitcher mTestableKeyboardSwitcher;
     private AnyKeyboardView mSpiedKeyboardView;
