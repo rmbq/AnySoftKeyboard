@@ -59,16 +59,7 @@
     <string name="effects_group">Mga epekto</string>
     <string name="ime_settings">Mga setting ng keyboard</string>
     <string name="switch_incognito">Mode ni Incognito</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Manginig kapag ipinduntin ang key</string>
-    <string name="vibrate_on_key_press_summary">Ang vibration level ay para sa key-press. Kasalukuyan: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Pumili ng vibration type</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Wala</item>
-        <item>Magaan</item>
-        <item>Katamtaman</item>
-        <item>Malakas</item>
-    </string-array>
     <string name="pop_text_type_never">Hindi kailanman</string>
     <string name="pop_text_type_on_correction">Ang pagwawasto ng salita</string>
     <string name="pop_text_type_on_word">Ang anumang salita</string>
@@ -178,9 +169,6 @@
     <string name="special_dictionaries_group_summary">Mga mungkahing ginagamit ng diksyunaryo sa AnySoftKeyboard</string>
     <string name="use_user_dictionary">User-diksyunaryo</string>
     <string name="use_user_dictionary_on_summary">Magmungkahi sa mga dinadagdag ng mga salita ng mga gumagamit(I-double-click ang typed-suggestion upang maidagdag)</string>
-    <string name="always_use_fallback_user_dictionary">Gamitin ang fallback User-diksyunaryo</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Gumamit lamang ng AnySoftKeyboard\'s built-in User-disyunaryo na mekanismo(di inirerekumenda).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Subukan ang paggamit ng Android\'s built-in User-diksyunaryo muna(inirekomenda).</string>
     <string name="use_auto_dictionary">Auomatikong diksyunaryo</string>
     <string name="use_auto_dictionary_dialog_title">I-select ang learn method</string>
     <string name="use_auto_dictionary_summary">Awtomatikong matuto ng mga bagong salita. Matuto sa pamaraan: %s</string>

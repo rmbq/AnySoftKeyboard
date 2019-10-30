@@ -63,16 +63,7 @@
     <string name="effects_group">Hatások</string>
     <string name="ime_settings">Billentyűzet beállítások</string>
     <string name="switch_incognito">Inkognitó mód</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Gombnyomásra rezegjen</string>
-    <string name="vibrate_on_key_press_summary">Rezgésszint visszacsatolás a gombnyomáshoz. Jelenleg: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Rezgés erejének kiválasztása</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Nincs</item>
-        <item>Enyhe</item>
-        <item>Közepes</item>
-        <item>Erős</item>
-    </string-array>
     <string name="power_save_mode_dialog_title">Energiatakarékos mód engedélyezése</string>
     <string name="pop_text_type_title">Pop billentyűkkel gépelt szöveg</string>
     <string name="pop_text_type_summary">Mikor kell megnyomni a szöveget a megnyomott gombokból. Jelenleg: %s</string>
@@ -193,11 +184,6 @@
     <string name="special_dictionaries_group_summary">Az AnySoftKeyboard programban használt javaslati szótárak</string>
     <string name="use_user_dictionary">Felhasználói-szótár</string>
     <string name="use_user_dictionary_on_summary">Javasoljon felhasználói hozzáadott szavakat (kattintson duplán egy hozzáadott tipizált javaslatra)</string>
-    <string name="always_use_fallback_user_dictionary">Használja a tartalék felhasználói-szótárt</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Csak az AnySoftKeyboard beépített felhasználói-szótárának mechanizmusa használható (nem ajánlott).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Először próbálja meg használni az Android beépített
-        felhasználói szótárát (ajánlott).
-    </string>
     <string name="use_auto_dictionary">Automatikus szótár</string>
     <string name="use_auto_dictionary_dialog_title">Válassza ki a tanulási módot</string>
     <string name="use_auto_dictionary_summary">Automatikusan új szavakat tanulhat. Ismerje meg a módszert: %s

@@ -52,7 +52,8 @@ import com.menny.android.anysoftkeyboard.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw implements InputViewBinder {
+public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
+        implements InputViewBinder, ActionsStripSupportedChild {
 
     private static final int DELAY_BEFORE_POPPING_UP_EXTENSION_KBD = 35; // milliseconds
     private static final String TAG = "AnyKeyboardView";
@@ -152,8 +153,20 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw implements Inp
 
     public void setBottomOffset(int extraBottomOffset) {
         mExtraBottomOffset = Math.max(extraBottomOffset, mMinimumKeyboardBottomPadding);
-        setPadding(getPaddingLeft(), getPaddingTop(), getPaddingRight(), getPaddingBottom());
+        setPadding(
+                getPaddingLeft(),
+                getPaddingTop(),
+                getPaddingRight(),
+                (int) Math.max(mExtraBottomOffset, getThemedKeyboardDimens().getPaddingBottom()));
         requestLayout();
+    }
+
+    @Override
+    public void setPadding(int left, int top, int right, int bottom) {
+        // this will ensure that even if something is setting the padding (say, in setTheme
+        // function)
+        // we will still keep the bottom-offset requirement.
+        super.setPadding(left, top, right, Math.max(mExtraBottomOffset, bottom));
     }
 
     @Override
@@ -187,11 +200,6 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw implements Inp
     protected KeyPreviewsController createKeyPreviewManager(
             Context context, PreviewPopupTheme previewPopupTheme) {
         return new KeyPreviewsManager(context, this, mPreviewPopupTheme);
-    }
-
-    @Override
-    public void setPadding(int left, int top, int right, int bottom) {
-        super.setPadding(left, top, right, Math.max(bottom, mExtraBottomOffset));
     }
 
     @Override

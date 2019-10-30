@@ -66,16 +66,7 @@ woordenlijst
     <string name="effects_group">Effecten</string>
     <string name="ime_settings">Toetsenbordinstellingen</string>
     <string name="switch_incognito">Incognitomodus</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Trillen bij toetsaanslag</string>
-    <string name="vibrate_on_key_press_summary">Trillingsniveauterugkoppeling voor indrukken toets. Momenteel: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Kies trillingensoort</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Geen</item>
-        <item>Licht</item>
-        <item>Gemiddeld</item>
-        <item>Sterk</item>
-    </string-array>
     <string name="night_mode_screen">Nachtmodusinstellingen</string>
     <string name="night_mode_description">Nachtmodus wijzigt deze eigenschappen:</string>
     <string name="night_mode_state_summary">Huidige nachtmodusdrempel:\u0020%s</string>
@@ -225,9 +216,6 @@ woordenlijst
     <string name="special_dictionaries_group_summary">Woordenlijsten met voorstellen gebruikt in AnySoftKeyboard</string>
     <string name="use_user_dictionary">Gebruikerswoordenlijst</string>
     <string name="use_user_dictionary_on_summary">Stel woorden voor die door gebruiker zijn toegevoegd (dubbelklik een voorstel om toe te voegen)</string>
-    <string name="always_use_fallback_user_dictionary">Gebruik uitwijk gebruikerswoordenlijst</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Gebruik alleen het ingebouwde gebruikerswoordenlijst mechanisme (niet aanbevolen).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Probeer eerst de gebruikerswoordenlijst van Android (aanbevolen).</string>
     <string name="use_auto_dictionary">Automatische woordenlijst</string>
     <string name="use_auto_dictionary_dialog_title">Kies leermethode</string>
     <string name="use_auto_dictionary_summary">Leer automatisch nieuwe woorden. Leermethode: %s</string>

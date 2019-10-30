@@ -87,18 +87,7 @@
     <string name="effects_group">کاریگەرییەکان</string>
     <string name="ime_settings">ڕێکخستنەکانی تەختەکلیل</string>
     <string name="switch_incognito">شێوازی نادیار</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">لەرزین لەکاتی نووسین</string>
-    <string name="vibrate_on_key_press_summary">ڕێژەی ئاستی لەرزین:
-        %s
-    </string>
-    <string name="vibrate_on_key_press_dialog_title">ڕێژەی لەرزین</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>ناچالاک</item>
-        <item>کەم</item>
-        <item>مامناوەند</item>
-        <item>زۆر</item>
-    </string-array>
     <string name="night_mode_screen">ڕێکخستنەکانی دۆخی تاریک</string>
     <string name="night_mode_description">تایبەتمەندی دۆخی تاریک ئەم بەشانە ئەگرێتەوە:</string>
     <string name="night_mode_state_summary">دۆخی تاریک چالاک ئەبێ لە:\u0020%s</string>
@@ -279,11 +268,6 @@
     </string>
     <string name="use_user_dictionary">فەرهەنگی بەکارهێنەر</string>
     <string name="use_user_dictionary_on_summary">پێشنیارکردنی ووشەکانی بەکارهێنەر (دووجار دەستی پێدابنێ بۆ زیادکردن)
-    </string>
-    <string name="always_use_fallback_user_dictionary">بەکارهێنانی فەرهەنگی دروستکراوی بەکارهێنەر</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">تەنیا بەکارهێنانی فەرهەنگی تایبەتی بەرنامەکە (پێشنیار نەکراوە).
-    </string>
-    <string name="always_use_fallback_user_dictionary_off_summary">بەکارهێنانی فەرهەنگی بەکارهێنەری دامەزراوی بنەڕەتی سیستەمی ئەندرۆید (پێشنیارکراو)
     </string>
     <string name="use_auto_dictionary">فەرهەنگی خۆکاری</string>
     <string name="use_auto_dictionary_dialog_title">شێوازی پاشەکەوتکردنی ووشەی نووێ هەڵبژێرە</string>

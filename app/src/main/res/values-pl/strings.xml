@@ -55,16 +55,7 @@
     <string name="gesture_settings">Gesty</string>
     <string name="effects_group">Efekty</string>
     <string name="ime_settings">Ustawienia klawiatury</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Wibruj przy naciśnięciu</string>
-    <string name="vibrate_on_key_press_summary">Poziom wibracji przy naciśnięciu klawiszy. Obecnie: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Wybierz typ wibracji</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Żadne</item>
-        <item>Lekkie</item>
-        <item>Średnie</item>
-        <item>Mocne</item>
-    </string-array>
     <string name="sound_on">Dźwięk przy naciśnięciu</string>
     <string name="sound_on_summary">Efekt dźwiękowy przy naciśnięciu klawisza.</string>
     <string name="use_custom_sound_volume">Dostosuj głośność</string>
@@ -144,7 +135,6 @@
     <string name="more_ui_settings_group">Interfejs użytkownika</string>
     <string name="special_dictionaries_group">Specjalne słowniki</string>
     <string name="use_user_dictionary">Słownika użytkownika</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Użyj tylko wbudowanego mechanizmu słownika użytkownika AnySoftKeyboard (niezalecane).</string>
     <string name="use_auto_dictionary">Słownik automatyczny</string>
     <string name="use_auto_dictionary_dialog_title">Wybierz metodę uczenia</string>
     <string name="use_auto_dictionary_summary">Automatycznie ucz się nowych słów. Metoda uczenia: %s</string>

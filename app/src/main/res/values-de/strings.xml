@@ -61,26 +61,24 @@
     <string name="effects_group">Effekte</string>
     <string name="ime_settings">Tastatureinstellungen</string>
     <string name="switch_incognito">Inkognito Modus</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrieren bei Tastendruck</string>
-    <string name="vibrate_on_key_press_summary">Vibrationsstärke für einen Tastendruck. Derzeit: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Wähle die Vibrationsstärke</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Keine</item>
-        <item>Leicht</item>
-        <item>Mittel</item>
-        <item>Stark</item>
-    </string-array>
+    <string name="night_mode_type_never">Nie</string>
+    <string name="night_mode_type_follow_system">System befolgen</string>
+    <string name="night_mode_type_always">Immer</string>
     <string name="power_save_mode_screen">Energiespareinstellungen</string>
     <string name="power_save_mode_description">Der Energiesparmodus reduziert den Energieverbrauch von AnySoftKeyboard, indem Funktionen deaktiviert werden:</string>
     <string name="power_save_mode_state_summary">Derzeitiger Energiesparauslöser: \u0020%s</string>
     <string name="power_save_mode_dialog_title">Aktiviere Energiesparmodus</string>
+    <string name="power_save_mode_types_never">Nie</string>
+    <string name="power_save_mode_types_lower_battery">Bei schwachem Akku</string>
+    <string name="power_save_mode_types_always">Immer</string>
     <string name="power_saving_keyboard_theme_name">Energiesparmodusdesign</string>
     <string name="power_saving_keyboard_theme_description">Dunkle Farben, simples Layout, welches weniger Energie vom Gerät verbraucht.</string>
     <string name="power_save_mode_animation_control">Deaktiviere Animationen und Tastenvorschau</string>
     <string name="power_save_mode_sound_control">Deaktiviere Tastenanschlagstöne</string>
     <string name="power_save_mode_vibration_control">Deaktiviere Tastendruckvibrationen</string>
     <string name="power_save_mode_suggestions_control">Deaktiviere Wortvorschläge</string>
+    <string name="power_save_mode_gesture_typing_control">Deaktiviere Gestentippen</string>
     <string name="power_save_mode_theme_control">Wechsele zu dunklem, einfachen Design</string>
     <string name="pop_text_type_title">Poptext getippt von Tasten</string>
     <string name="pop_text_type_summary">Wann das Popup einer gedrückten Taste erscheint. Derzeit:\u0020%s</string>
@@ -206,9 +204,6 @@
     <string name="special_dictionaries_group_summary">In AnySoftKeyboard verwendete Vorschlagswörterbücher</string>
     <string name="use_user_dictionary">Benutzerwörterbuch</string>
     <string name="use_user_dictionary_on_summary">Schlägt vom Benutzer hinzugefügte Wörter vor (Doppelklick auf ein eingetipptes Wort zum Hinzufügen)</string>
-    <string name="always_use_fallback_user_dictionary">Verwende Ersatzwörterbuch</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Nur AnySoftKeyboards integriertes Benutzerwörterbuch verwenden (nicht empfohlen).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Versuche integriertes Benutzerwörterbuch von Android zuerst zu verwenden (empfohlen).</string>
     <string name="use_auto_dictionary">Automatisches Wörterbuch</string>
     <string name="use_auto_dictionary_dialog_title">Lernmethode wählen</string>
     <string name="use_auto_dictionary_summary">Neue Wörter automatisch lernen. Lernmethode: %s</string>

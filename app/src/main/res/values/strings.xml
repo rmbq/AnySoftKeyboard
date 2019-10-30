@@ -95,16 +95,8 @@
     <string name="effects_group">Effects</string>
     <string name="ime_settings">Keyboard settings</string>
     <string name="switch_incognito">Incognito Mode</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrate on key-press</string>
-    <string name="vibrate_on_key_press_summary">Vibration level feedback for key-press. Currently:\u0020%s</string>
-    <string name="vibrate_on_key_press_dialog_title">Select vibration type</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>None</item>
-        <item>Light</item>
-        <item>Medium</item>
-        <item>Strong</item>
-    </string-array>
+    <string name="vibrate_on_key_press_value_template">%d milliseconds</string>
 
     <string name="night_mode_screen">Night-Mode settings</string>
     <string name="night_mode_description">Night-Mode will change these features:</string>
@@ -167,6 +159,10 @@
     <string name="switch_keyboard_on_space">Space switches keyboards</string>
     <string name="switch_keyboard_on_space_on_summary">Switch from symbols/numbers to alphabet when pressing space.</string>
     <string name="switch_keyboard_on_space_off_summary">Do not switch from symbols/numbers to alphabet when pressing space.</string>
+
+    <string name="colorize_nav_bar_title">Draw behind the navigation-bar</string>
+    <string name="colorize_nav_bar_summary_on">Will draw the keyboard background behind the navigation-bar. This is not supported by all devices.</string>
+    <string name="colorize_nav_bar_summary_off">Do not draw behind the navigation-bar.</string>
 
     <string name="persistent_layout_per_package_id_title">Remember alphabet layout per App</string>
     <string name="persistent_layout_per_package_id_off_summary">Use the same layout for all Apps.</string>
@@ -300,9 +296,9 @@
     <string name="use_user_dictionary">User-dictionary</string>
     <string name="use_user_dictionary_on_summary">Suggest user added words (double-click a typed-suggestion to add)</string>
     <string name="use_user_dictionary_off_summary"/>
-    <string name="always_use_fallback_user_dictionary">Use fallback User-dictionary</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Use only AnySoftKeyboard\'s built-in User-dictionary mechanism (not recommended).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Try to use Android\'s built-in User-dictionary first (recommended).</string>
+    <string name="always_use_fallback_user_dictionary">Use private User-Dictionary storage</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Use private-storage AnySoftKeyboard\'s built-in User-dictionary mechanism.</string>
+    <string name="always_use_fallback_user_dictionary_off_summary">Try to use Android\'s global built-in User-dictionary.</string>
     <string name="use_auto_dictionary">Auto dictionary</string>
     <string name="use_auto_dictionary_dialog_title">Select learn method</string>
     <string name="use_auto_dictionary_summary">Automatically learn new words. Learn method: %s</string>

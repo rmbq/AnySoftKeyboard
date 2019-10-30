@@ -64,16 +64,7 @@
     <string name="effects_group">Efektai</string>
     <string name="ime_settings">Klaviatūros nustatymai</string>
     <string name="switch_incognito">Inkognito režimas</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibruoti paspaudus</string>
-    <string name="vibrate_on_key_press_summary">Vibracijos lygis grįžtamąjam klavišo paspaudimo ryšiui. Dabar yra: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Pasirinkite vibracijos tipą</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Jokios virbacijos</item>
-        <item>Švelnus</item>
-        <item>Vidutinis</item>
-        <item>Stiprus</item>
-    </string-array>
     <string name="night_mode_screen">Naktinio režimo nustatymai</string>
     <string name="night_mode_description">Naktinis režimas pakeis šias funkcijas:</string>
     <string name="night_mode_state_summary">Dabartinis naktinio režimo trigeris:\u0020%s</string>
@@ -226,9 +217,6 @@
     <string name="special_dictionaries_group_summary">Pasiūlymų žodynai naudojami „AnySoftKeyboard“</string>
     <string name="use_user_dictionary">Naudotojo žodynas</string>
     <string name="use_user_dictionary_on_summary">Pasiūlyti naudotojo pridėtus žodžius (dukart spustelėkite įvestą pasiūlymą, kad pridėti)</string>
-    <string name="always_use_fallback_user_dictionary">Naudoti atsarginį naudotojo žodyną</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Naudoti tik „AnySoftKeyboard“ vidinį naudotojo žodyno mechanizmą (nepatartina).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Bandyti naudoti „Android“ įtrauktą naudotojo žodyno mechanizmą (rekomenduojama).</string>
     <string name="use_auto_dictionary">Auto žodynas</string>
     <string name="use_auto_dictionary_dialog_title">Pasirinkite mokymosi režimą</string>
     <string name="use_auto_dictionary_summary">Automatiškai išmokti naujus žodžius. Išmokimo metodas: %s</string>

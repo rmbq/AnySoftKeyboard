@@ -51,16 +51,7 @@
     <string name="gesture_settings">Gesta</string>
     <string name="effects_group">Efekty</string>
     <string name="ime_settings">Možnosti klávesnice</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrovat při stisku klávesy</string>
-    <string name="vibrate_on_key_press_summary">Úroveň vibrační odezvy na stisk. Aktuálně: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Vyberte typ vibrace</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Bez vibrací</item>
-        <item>Lehké</item>
-        <item>Střední</item>
-        <item>Silné</item>
-    </string-array>
     <string name="sound_on">Zvuk při stisku klávesy</string>
     <string name="sound_on_summary">Zvukové efekty při stisku softwarové klávesnice.</string>
     <string name="use_custom_sound_volume">Vlastní hlasitost</string>
@@ -156,9 +147,6 @@
     <string name="special_dictionaries_group_summary">Návrhové slovníky používané v AnySoftKeyboard</string>
     <string name="use_user_dictionary">Uživatelský slovník</string>
     <string name="use_user_dictionary_on_summary">Navrhovat uživatelem přidaná slova (dvojklik na napsaném návrhu ho přidá)</string>
-    <string name="always_use_fallback_user_dictionary">Záložní uživ. slovník</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Použít pouze vestavěný mechanismus uživatelského slovníku AnySoftKeyboard (není doporučeno).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Pokusit se nejprve použít vestavěný mechanismus uživatelského slovníku systému Android (doporučeno).</string>
     <string name="use_auto_dictionary">Automatický slovník</string>
     <string name="use_auto_dictionary_dialog_title">Vyberte metodu učení</string>
     <string name="use_auto_dictionary_summary">Automaticky se učit nová slova. Metoda učení: %s</string>

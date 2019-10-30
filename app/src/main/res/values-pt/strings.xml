@@ -59,16 +59,7 @@
     <string name="gesture_settings">Gestos</string>
     <string name="effects_group">Efeitos</string>
     <string name="ime_settings">Definições do teclado</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrar ao pressionar</string>
-    <string name="vibrate_on_key_press_summary">Nível de vibração para pressionar. Atualmente: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Escolha o tipo de vibração</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Sem vibração</item>
-        <item>Curta</item>
-        <item>Média</item>
-        <item>Longa</item>
-    </string-array>
     <string name="sound_on">Som ao pressionar</string>
     <string name="sound_on_summary">Emitir som ao pressionar teclas.</string>
     <string name="use_custom_sound_volume">Definir volume</string>
@@ -160,7 +151,6 @@
     <string name="more_ui_settings_group">Interface</string>
     <string name="special_dictionaries_group">Dicionários especiais</string>
     <string name="use_user_dictionary">Dicionário do utilizador</string>
-    <string name="always_use_fallback_user_dictionary">Utilizar dicionário de utilizador como recurso</string>
     <string name="use_auto_dictionary">Dicionário automático</string>
     <string name="use_auto_dictionary_dialog_title">Escolha o modo de aprendizagem</string>
     <string name="use_auto_dictionary_summary">Aprender palavras automaticamente. Método: %s</string>

@@ -65,16 +65,7 @@
     <string name="effects_group">Efectes</string>
     <string name="ime_settings">Configuració del teclat</string>
     <string name="switch_incognito">Mode d\'incògnit</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibració de les tecles</string>
-    <string name="vibrate_on_key_press_summary">Nivell de resposta de vibració per al toc de tecles. Actualment: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Seleccioneu la durada de vibració</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Cap vibració</item>
-        <item>Feble</item>
-        <item>Normal</item>
-        <item>Forta</item>
-    </string-array>
     <string name="pop_text_type_never">Mai</string>
     <string name="pop_text_type_on_correction">En corregir una paraula</string>
     <string name="pop_text_type_on_word">En qualsevol paraula</string>
@@ -193,9 +184,6 @@
     <string name="special_dictionaries_group_summary">Suggeriments utilitzats als diccionaris de l\'AnySoftKeyboard</string>
     <string name="use_user_dictionary">Diccionari de l\'usuari</string>
     <string name="use_user_dictionary_on_summary">Suggereix paraules afegides per l\'usuari (toqueu 2 vegades al suggeriment per afegir-ho)</string>
-    <string name="always_use_fallback_user_dictionary">Utilitza el diccionari per defecte</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Utilitza només el diccionari de l\'usuari de l\'AnySoftKeyboard (no recomanat).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Utilitza el diccionari original d\'Android (recomanat).</string>
     <string name="use_auto_dictionary">Diccionari automàtic</string>
     <string name="use_auto_dictionary_dialog_title">Seleccioneu el mètode d\'aprenentatge</string>
     <string name="use_auto_dictionary_summary">Aprèn paraules automàticament. Mètode triat: %s</string>

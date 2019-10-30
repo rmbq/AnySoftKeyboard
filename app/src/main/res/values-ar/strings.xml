@@ -55,15 +55,7 @@
     <string name="effects_group">التأثيرات</string>
     <string name="ime_settings">إعدادات لوحة المفاتيح</string>
     <string name="switch_incognito">وضع التخفي</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">اهتزاز عند النقر على مفتاح</string>
-    <string name="vibrate_on_key_press_dialog_title">اختر نوع الاهتزاز</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>بدون اهتزاز</item>
-        <item>خفيف</item>
-        <item>متوسط</item>
-        <item>قوي</item>
-    </string-array>
     <string name="night_mode_screen">إعدادات الوضع الليلي</string>
     <string name="night_mode_description">سوف يقوم الوضع الليلي بتعديل الميزات التالية:</string>
     <string name="night_mode_dialog_title">تنشيط الوضع الليلي</string>
@@ -194,9 +186,6 @@
     <string name="special_dictionaries_group_summary">قواميس الإقتراحات المتوفرة على AnySoftKeyboard</string>
     <string name="use_user_dictionary">قاموس المستخدِم</string>
     <string name="use_user_dictionary_on_summary">إقتراح الكلمات المُضافَة من طرف المستخدِم (النقر مرتين لإضافة كلمة)</string>
-    <string name="always_use_fallback_user_dictionary">استخدام قاموس المستخدِم كبديل</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">إستخدم فقط ميكانزمات قاموس المستخدِم المدمج مع AnySoftWkeyboard.</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">حاول أولا إستعمال قاموس المستخدِم المدمج في أنرويد (مستحسن).</string>
     <string name="use_auto_dictionary">قاموس تلقائي</string>
     <string name="use_auto_dictionary_dialog_title">تحديد أسلوب التعلّم</string>
     <string name="use_auto_dictionary_summary">تعلّم الكلمات الجديدة تلقائياً. طريقة التعلّم : %s</string>

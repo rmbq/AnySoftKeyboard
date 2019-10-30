@@ -1,6 +1,6 @@
 AnySoftKeyboard
 ====================
-`master` latest build: [![CircleCI](https://circleci.com/gh/AnySoftKeyboard/AnySoftKeyboard/tree/master.svg?style=svg)](https://circleci.com/gh/AnySoftKeyboard/AnySoftKeyboard/tree/master)<br/>
+`master` latest build: ![](https://github.com/AnySoftKeyboard/AnySoftKeyboard/workflows/AnySoftKeyboard/badge.svg)<br/>
 `master` coverage: [![codecov](https://codecov.io/gh/AnySoftKeyboard/AnySoftKeyboard/branch/master/graph/badge.svg)](https://codecov.io/gh/AnySoftKeyboard/AnySoftKeyboard)<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[![Gitter chat](https://badges.gitter.im/AnySoftKeyboard/gitter.png)](https://gitter.im/AnySoftKeyboard)

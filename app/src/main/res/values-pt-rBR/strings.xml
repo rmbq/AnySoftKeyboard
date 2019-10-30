@@ -63,16 +63,7 @@
     <string name="effects_group">Efeitos</string>
     <string name="ime_settings">Configurações do teclado</string>
     <string name="switch_incognito">Modo anônimo</string>
-    <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrar ao pressionar tecla</string>
-    <string name="vibrate_on_key_press_summary">Nível de vibração ao pressionar. Atualmente: %s</string>
-    <string name="vibrate_on_key_press_dialog_title">Selecione o tipo de vibração</string>
-    <string-array name="vibrate_on_key_press_types">
-        <item>Sem vibração</item>
-        <item>Fraco</item>
-        <item>Médio</item>
-        <item>Forte</item>
-    </string-array>
     <string name="night_mode_screen">Configurações do modo noturno</string>
     <string name="night_mode_description">O modo noturno irá alterar essas características:</string>
     <string name="night_mode_state_summary">Modo noturno ativo, atualmente:\u0020%s</string>
@@ -224,9 +215,6 @@
     <string name="special_dictionaries_group_summary">Dicionários de sugestão usados em AnySoftKeyboard</string>
     <string name="use_user_dictionary">Dicionário do usuário</string>
     <string name="use_user_dictionary_on_summary">Adicionar palavra sugerida (clique duas vezes na palavra para adicionar)</string>
-    <string name="always_use_fallback_user_dictionary">Usar o dicionário do usuário já existente</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Usar apenas o dicionário do AnySoftKeyboard (não recomendado).</string>
-    <string name="always_use_fallback_user_dictionary_off_summary">Tentar usar o dicionário do usuário já existente (recomendado).</string>
     <string name="use_auto_dictionary">Dicionário automático</string>
     <string name="use_auto_dictionary_dialog_title">Escolha o modo de aprendizagem</string>
     <string name="use_auto_dictionary_summary">Aprender automaticamente novas palavras. Método de aprendizado: %s</string>
